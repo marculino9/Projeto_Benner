@@ -1,0 +1,54 @@
+﻿@model Projeto02.Models.Funcionario
+@using Projeto02.Models.Enum
+
+<h3 class="form- active">Cadastrar Funcionarios</h3>
+<div>
+    <form action="/Funcionario/Adiciona" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="funcionario.Nome" id="nome" class="form-control" />
+
+        <label for="equipe">Equipe:</label>
+        <select id="equipe" name="funcionario.EquipeId" class="form-control">
+            @foreach (var equipe in ViewBag.Equipe)
+            {
+                <option value="@equipe.Id" selected="@equipe.Id.Equals(ViewBag.EquipeId)">
+                    @equipe.NomeEquipe
+                </option>
+
+            }
+        </select>
+
+        <label for="cargo">Cargo:</label>
+        <select id="cargo" name="funcionario.CargoId" class="form-control">
+            @foreach (var cargo in ViewBag.Cargo)
+            {
+                <option value="@cargo.Id" selected="@cargo.Id.Equals(ViewBag.CargoId)">
+                    @cargo.NomeCargo
+                </option>
+            }
+        </select>
+
+        <label for="maquina">Maquina:</label>
+        <input type="text" name="funcionario.Maquina" id="maquina" class="form-control" />
+
+        @*<label for="usuarioId">UsuarioId:</label>
+            <input type="text" name="funcionario.UsuarioId" id="usuarioId" class="form-control" />
+
+            <label for="EhGestor">Gestor:</label>
+            <input type="checkbox" name="funcionario.EhGestor" value="True" id="EhGestor" class="form-group" />*@
+
+        <label for="codigoVerificacao">Codigo Verificacao:</label>
+        <input type="text" name="funcionario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TipoPerfil, "Tipo de Perfil", htmlAttributes: new { @class = "control-label col-md-2" })
+
+            <div class="col-md-10">
+                @Html.DropDownList("TipoPerfil", new SelectList(Enum.GetValues(typeof(TipoPerfil))), "Selecione o tipo de Perfil", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <input type="submit" value="Cadastrar" />
+
+    </form>
+</div>

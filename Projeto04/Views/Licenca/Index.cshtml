@@ -1,0 +1,30 @@
+﻿<h2>Lista de Licencas do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Chave</th>
+            <th>Quantidade</th>
+            <th>SoftwareId</th>
+            @*<th>UsuarioId</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var licenca in ViewBag.Licenca)
+        {
+            <tr>
+                <td>@licenca.Id</td>
+                <td>@licenca.Chave</td>
+                <td>@licenca.Quantidade</td>
+                <td>@licenca.Software.Nome</td>
+                @*<td>@licenca.Usuario.UsuarioId</td>*@
+                <td>
+                    <a href="Licenca/Alterar/@licenca.Id">Atualizar</a>
+                </td>
+                <td>
+                    <a href="Licenca/Remover/@licenca.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+﻿
+    <form action="/Funcionario/Atualiza/@ViewBag.Funcionario.Id" method="post">
+
+        <label for="nome">Nome: </label>
+        <input id="nome" value="@ViewBag.Funcionario.Nome" name="Nome" class="form-control" />
+
+        <label for="equipe">Equipe: </label>
+        <select id="equipe" name="EquipeId" class="form-control">
+            @foreach (var equipe in ViewBag.Equipe)
+            {
+                <option value="@equipe.Id" selected="@equipe.Id.Equals(ViewBag.Funcionario.EquipeId)">
+                    @equipe.NomeEquipe
+                </option>
+            }
+        </select>
+
+        <label for="cargo">Cargo: </label>
+        <select id="cargo" name="CargoId" class="form-control">
+            @foreach (var cargo in ViewBag.Cargo)
+            {
+                <option value="@cargo.Id" selected="@cargo.Id.Equals(ViewBag.Funcionario.CargoId)">
+                    @cargo.NomeCargo
+                </option>
+            }
+        </select>
+
+        <label for="maquina">Maquina: </label>
+        <input id="maquina" value="@ViewBag.Funcionario.Maquina" name="Maquina" class="form-control" />
+
+        @*<label for="usuarioId">UsuarioId: </label>
+        <input id="usuarioId" value="@ViewBag.Funcionario.UsuarioId" name="usuarioId" class="form-control" />*@
+
+        @*<label for="EhGestor">Gestor: "True or False"</label>
+        <input id="EhGestor" value="@ViewBag.Funcionario.GestorId" name="funcionario.EhGestor" class="form-control" />*@
+
+        <input type="submit" value="Alterar" />
+
+    </form>
+
+
+

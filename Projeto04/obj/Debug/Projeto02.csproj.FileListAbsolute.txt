@@ -1,0 +1,265 @@
+D:\Programas\C#\Visual Studio\Projeto02\bin\Projeto02.dll.config
+D:\Programas\C#\Visual Studio\Projeto02\bin\Projeto02.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Projeto02.pdb
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csc.exe
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csc.exe.config
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csc.rsp
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csi.exe
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csi.exe.config
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\csi.rsp
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.AppContext.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Collections.Immutable.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Console.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.IO.Compression.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.IO.FileSystem.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.IO.Pipes.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Reflection.Metadata.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.AccessControl.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Claims.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.ValueTuple.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Xml.XPath.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\vbc.exe
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\vbc.exe.config
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\vbc.rsp
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\VBCSCompiler.exe
+D:\Programas\C#\Visual Studio\Projeto02\bin\roslyn\VBCSCompiler.exe.config
+D:\Programas\C#\Visual Studio\Projeto02\bin\Antlr3.Runtime.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Web.Infrastructure.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Newtonsoft.Json.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Helpers.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Mvc.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Optimization.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Razor.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.Deployment.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.Razor.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\WebGrease.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Helpers.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Mvc.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Optimization.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.Razor.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.Deployment.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Web.WebPages.Razor.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Newtonsoft.Json.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Antlr3.Runtime.pdb
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.Helpers.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.Mvc.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.Optimization.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.Razor.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.WebPages.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+D:\Programas\C#\Visual Studio\Projeto02\obj\Debug\Projeto02.csproj.CoreCompileInputs.cache
+D:\Programas\C#\Visual Studio\Projeto02\obj\Debug\Projeto02.csproj.CopyComplete
+D:\Programas\C#\Visual Studio\Projeto02\obj\Debug\Projeto02.dll
+D:\Programas\C#\Visual Studio\Projeto02\obj\Debug\Projeto02.pdb
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Caching.Memory.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.Binder.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Logging.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Options.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Primitives.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Remotion.Linq.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Buffers.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Collections.Immutable.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.ComponentModel.Annotations.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Data.SqlClient.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Interactive.Async.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Memory.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Numerics.Vectors.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Caching.Memory.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Configuration.Binder.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Logging.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Options.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.Extensions.Primitives.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Remotion.Linq.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Buffers.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Collections.Immutable.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Interactive.Async.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Memory.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Numerics.Vectors.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Design.dll
+D:\Programas\C#\Visual Studio\Projeto02\bin\Microsoft.EntityFrameworkCore.Design.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Projeto02.dll.config
+C:\Users\marcu\Desktop\Projeto04\bin\Projeto02.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Projeto02.pdb
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csc.exe
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csc.exe.config
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csc.rsp
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csi.exe
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csi.exe.config
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\csi.rsp
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.AppContext.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Console.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.IO.Compression.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.IO.Pipes.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Claims.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.ValueTuple.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Xml.XPath.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\vbc.exe
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\vbc.exe.config
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\vbc.rsp
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\VBCSCompiler.exe
+C:\Users\marcu\Desktop\Projeto04\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\marcu\Desktop\Projeto04\bin\Antlr3.Runtime.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Logging.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Options.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Newtonsoft.Json.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Remotion.Linq.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Buffers.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Collections.Immutable.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.ComponentModel.Annotations.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Data.SqlClient.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Interactive.Async.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Memory.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Numerics.Vectors.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Helpers.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Mvc.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Optimization.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Razor.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.Deployment.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.dll
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.Razor.dll
+C:\Users\marcu\Desktop\Projeto04\bin\WebGrease.dll
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Design.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Logging.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Options.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Remotion.Linq.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Buffers.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Collections.Immutable.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Interactive.Async.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Memory.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Numerics.Vectors.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Helpers.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Mvc.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Optimization.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.Razor.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.Deployment.xml
+C:\Users\marcu\Desktop\Projeto04\bin\System.Web.WebPages.Razor.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Newtonsoft.Json.xml
+C:\Users\marcu\Desktop\Projeto04\bin\Antlr3.Runtime.pdb
+C:\Users\marcu\Desktop\Projeto04\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\marcu\Desktop\Projeto04\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\marcu\Desktop\Projeto04\obj\Debug\Projeto02.csproj.CoreCompileInputs.cache
+C:\Users\marcu\Desktop\Projeto04\obj\Debug\Projeto02.csproj.CopyComplete
+C:\Users\marcu\Desktop\Projeto04\obj\Debug\Projeto02.dll
+C:\Users\marcu\Desktop\Projeto04\obj\Debug\Projeto02.pdb
+C:\Users\marcu\Desktop\Projeto04\obj\Debug\Projeto02.csprojAssemblyReference.cache

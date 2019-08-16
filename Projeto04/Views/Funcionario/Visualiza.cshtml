@@ -1,0 +1,34 @@
+﻿@model Projeto02.Models.Funcionario
+
+<h2>Lista de Funcionario do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Equipe</th>
+            <th>Cargo</th>
+            <th>Maquina</th>
+            <th>Usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var funcionario in ViewBag.Funcionario)
+        {
+            <tr>
+                <td>@funcionario.Id</td>
+                <td>@funcionario.Nome</td>
+                <td>@funcionario.Equipe.NomeEquipe</td>
+                <td>@funcionario.Cargo.NomeCargo</td>
+                <td>@funcionario.Maquina</td>
+                <td>@funcionario.Usuario.Login</td>
+                <td>
+                    <a href="Alterar/@funcionario.Id">Alterar</a>
+                </td>
+                <td>
+                    <a href="Remover/@funcionario.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

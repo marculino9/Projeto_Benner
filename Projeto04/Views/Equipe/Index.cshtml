@@ -1,0 +1,26 @@
+﻿<h2>Lista de Equipes do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome da Equipe</th>
+            <th>Nome do Gestor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var equipe in ViewBag.Equipe)
+        {
+            <tr>
+                <td>@equipe.Id</td>
+                <td>@equipe.NomeEquipe</td>
+                <td>@equipe.Gestor.Funcionario.TipoPerfil</td>
+                <td>
+                    <a href="Equipe/Alterar/@equipe.Id">Atualizar</a>
+                </td>
+                <td>
+                    <a href="Equipe/Remover/@equipe.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

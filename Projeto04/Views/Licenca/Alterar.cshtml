@@ -1,0 +1,15 @@
+﻿
+    <form action="/Licenca/Atualiza/@ViewBag.Licenca.Id" method="post">
+
+        <label for="chave">Chave: </label>
+        <input id="chave" value="@ViewBag.Licenca.Chave" name="chave" class="form-control" />
+
+        <label for="quantidade">Quantidade: </label>
+        <input id="quantidade" value="@ViewBag.Licenca.Quantidade" name="quantidade" class="form-control" />
+
+        <label for="softwareId">SoftwareId: </label>
+        <input id="softwareId" value="@ViewBag.Licenca.SoftwareId" name="softwareId" class="form-control" />
+
+        <input type="submit" value="Atualizar" />
+
+    </form>

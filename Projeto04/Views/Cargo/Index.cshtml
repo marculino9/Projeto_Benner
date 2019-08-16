@@ -1,0 +1,24 @@
+﻿<h2>Lista de Cargos do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome do Cargo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cargo in ViewBag.Cargo)
+        {
+        <tr>
+            <td>@cargo.Id</td>
+            <td>@cargo.NomeCargo</td>
+            <td>
+                <a href="Cargo/Alterar/@cargo.Id">Atualizar</a>
+            </td>
+            <td>
+                <a href="Cargo/Remover/@cargo.Id">Remover</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

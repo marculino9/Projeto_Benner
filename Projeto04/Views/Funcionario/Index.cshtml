@@ -1,0 +1,36 @@
+﻿<h2>Lista de Funcionario do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Equipe</th>
+            <th>Cargo</th>
+            <th>Maquina</th>
+            <th>CodigoVerificacao</th>
+            <th>Tipo Perfil</th>
+            @*<th>Gestor</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var funcionario in ViewBag.Funcionario)
+        {
+            <tr>
+                <td>@funcionario.Id</td>
+                <td>@funcionario.Nome</td>
+                <td>@funcionario.Equipe.NomeEquipe</td>
+                <td>@funcionario.Cargo.NomeCargo</td>
+                <td>@funcionario.Maquina</td>
+                <td>@funcionario.CodigoVerificacao</td>
+                <td>@funcionario.TipoPerfil</td>
+                @*<td>@funcionario.EhGestor</td>*@
+                <td>
+                    <a href="Funcionario/Alterar/@funcionario.Id">Alterar</a>
+                </td>
+                <td>
+                    <a href="Funcionario/Remover/@funcionario.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

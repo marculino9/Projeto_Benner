@@ -1,0 +1,28 @@
+﻿<h2>Lista de Usuarios do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Login</th>
+            <th>Senha</th>
+            <th>Funcionario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in ViewBag.Usuario)
+        {
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Login</td>
+                <td>@usuario.Senha</td>
+                <td>@usuario.Funcionario.Nome</td>
+                @*<td>
+                    <a href="Equipe/Alterar/@usuario.Id">Atualizar</a>
+                </td>
+                <td>
+                    <a href="Equipe/Remover/@usuario.Id">Remover</a>
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
