@@ -16,7 +16,5 @@ namespace Projeto02.Models
         public virtual Software Software { get; set; }
         [Required]
         public int SoftwareId { get; set; }
-        public virtual Usuario Usuario { get; set; }
-        public int UsuarioId { get; set; }
     }
 }

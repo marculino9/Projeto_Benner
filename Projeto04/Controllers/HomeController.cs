@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto02.Filtro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Projeto02.Controllers
 {
     public class HomeController : Controller
     {
+        [AutorizacaoFilter]
         public ActionResult Index()
         {
             return View();
@@ -26,7 +28,7 @@ namespace Projeto02.Controllers
 
             return View();
         }
-        [Route("adm/")]
+        [AutorizacaoFilter]
         public ActionResult Adm()
         {
 

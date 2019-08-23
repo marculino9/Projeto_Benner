@@ -27,7 +27,7 @@ namespace Projeto02.Contexto
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Status>().Property("StatusId").IsRequired();
+            //modelBuilder.Entity<Licenca>().Property("UsuarioId").IsRequired();
             //modelBuilder.Entity<Software>().HasKey("PessoaId");
             //modelBuilder.Entity<Funcionario>().HasOne(l => l.Equipe).WithOne(u => u.GestorId).HasForeignKey<Equipe>(u => u.GestorId);
 

@@ -41,14 +41,33 @@
         <input type="text" name="funcionario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TipoPerfil, "Tipo de Perfil", htmlAttributes: new { @class = "control-label col-md-2" })
+            @*  @Html.LabelFor(model => model.TipoPerfil, "Tipo de Perfil", htmlAttributes: new { @class = "control-label col-md-2" })*@
 
-            <div class="col-md-10">
-                @Html.DropDownList("TipoPerfil", new SelectList(Enum.GetValues(typeof(TipoPerfil))), "Selecione o tipo de Perfil", new { @class = "form-control" })
-            </div>
+            @*<select asp-for="Funcionario.TipoPerfil" class="form-control" asp-items="Html.GetEnumSelectList<TipoPerfil>()">
+            <option selected="selected" value="">Selecione o tipo de perfil</option>
+        </select>*@
+            @*<div class="col-md-10">
+            @Html.DropDownList("TipoPerfil", new SelectList(Enum.GetValues(typeof(TipoPerfil))), "Selecione o tipo de Perfil", new { @class = "form-control" })
+        </div>*@
+            @*<div class="col-md-10">
+            @Html.EnumDropDownListFor(x => x.TipoPerfil, "Selecione o tipo de Perfil", new { @class = "form-control" })
+        </div>*@
+
+            <label for="TipoPerfil">Tipo de perfil:</label>
+            <select id="TipoPerfil" name="funcionario.TipoPerfil" class="form-control">
+                <option selected="selected" value="">Selecione o tipo de perfil</option>
+                @foreach (var perfil in ViewBag.ListaEnum)
+                {
+                    <option value="@perfil.Value">
+                        @perfil.Text
+                    </option>
+                }
+            </select>
+
+        </div>
         </div>
 
-        <input type="submit" value="Cadastrar" />
+        <input class="btn btn-primary" type="submit" value="Cadastrar" />
 
     </form>
 </div>

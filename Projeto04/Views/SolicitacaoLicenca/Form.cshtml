@@ -1,32 +1,44 @@
-﻿<div>
-    <form action="/Produto/Adiciona" method="post">
-        @Html.AntiForgeryToken()
-        @Html.ValidationMessage("produto.Invalido")
+﻿@model Projeto02.Models.SolicitacaoLicenca
+
+<h3 class="form- active">Cadastrar Pedidos</h3>
+<div>
+    <form action="/SolicitacaoLicenca/Adiciona" method="post">
+
         <label for="nome">Nome:</label>
-        <input id="nome" name="produto.Nome" value="@ViewBag.Produto.Nome" class="form-control" />
-        @Html.ValidationMessage("produto.Nome")
-
-        <label for="preco">Preco:</label>
-        <input id="preco" name="produto.Preco" value="@ViewBag.Produto.Preco" class="form-control" />
-        @Html.ValidationMessage("produto.Preco")
-
-        <label for="quantidade">Quantidade:</label>
-        <input id="quantidade" name="produto.Quantidade" value="@ViewBag.Produto.Quantidade" class="form-control" />
-        @Html.ValidationMessage("produto.Quantidade")
-
-        <label for="descricao">Descricao:</label>
-        <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" class="form-control" />
-        @Html.ValidationMessage("produto.Descricao")
-
-        <label for="categoria">Categoria:</label>
-        <select id="categoria" name="produto.CategoriaId" class="form-control">
-            @foreach (var categoria in ViewBag.Categorias)
+        <select id="nome" name="SolicitacaoLicenca.SoftwareId" class="form-control">
+            @foreach (var software in ViewBag.Software)
             {
-                <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">@categoria.Nome</option>
+                <option value="@software.Id" selected="@software.Id.Equals(ViewBag.SoftwareId)">
+                    @software.NomeSoftware
+                </option>
+
             }
         </select>
-        @Html.ValidationMessage("produto.CategoriaId")
 
-        <input type="submit" value="Cadastrar" />
+        <label for="datainicio">Data Inicio:</label>
+        <input type="date" name="SolicitacaoLicenca.DataInicio" id="datainicio" class="form-control" />
+
+        <label for="datatermino">Data Termino:</label>
+        <input type="date" name="SolicitacaoLicenca.DataTermino" id="datatermino" class="form-control" />
+
+        @*<label for="status">Status:</label>
+        <select id="status" name="SolicitacaoLicenca.Status" class="form-control">
+            <option selected="selected" value="">Selecione o Status</option>
+            @foreach (var status in ViewBag.ListaEnum)
+            {
+                <option value="@status.Value">
+                    @status.Text
+                </option>
+            }
+        </select>*@
+
+        <label for="motivoDeUso">Motivo De Uso:</label>
+        <input type="text" name="SolicitacaoLicenca.MotivoDeUso" id="motivoDeUso" class="form-control" />
+        <br />
+        <label for="usuarioId">UsuarioId:</label>
+            <input type="text" name="SolicitacaoLicenca.UsuarioId" id="usuarioId" class="form-control" />
+
+        <input  class="btn btn-primary" type="submit" value="Completar" />
+
     </form>
 </div>

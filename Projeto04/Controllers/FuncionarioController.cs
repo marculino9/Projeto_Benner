@@ -1,5 +1,7 @@
 ﻿using Projeto02.DAO;
+using Projeto02.ExtensionMethods;
 using Projeto02.Models;
+using Projeto02.Models.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +41,8 @@ namespace Projeto02.Controllers
 
             ViewBag.Funcionario = new Funcionario();
 
+            ViewBag.ListaEnum = TipoPerfil.Administrador.ToSelectList();
+
             return View();
         }
 
@@ -74,6 +78,8 @@ namespace Projeto02.Controllers
             Funcionario funcionario = dao.BuscaPorId(id);
             ViewBag.Funcionario = funcionario;
 
+            ViewBag.ListaEnum = TipoPerfil.Administrador.ToSelectList();
+
             return View(funcionario);
         }
 
@@ -86,8 +92,9 @@ namespace Projeto02.Controllers
         }
 
         [HttpPost]
-        public ActionResult Atualiza([Bind(Include = "Id, Nome, EquipeId, CargoId, Maquina, UsuarioId, EhGestor")] Funcionario funcionario)
+        public ActionResult Atualiza(int id, [Bind(Include = "Id, Nome, EquipeId, CargoId, Maquina, TipoPerfil")] Funcionario funcionario)
         {
+            funcionario.Id = id;
             var dao = new FuncionarioDAO();
             dao.Atualiza(funcionario);
             return View();

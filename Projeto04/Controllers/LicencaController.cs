@@ -28,6 +28,10 @@ namespace Projeto02.Controllers
 
         public ActionResult Form()
         {
+            var dao = new SoftwareDAO();
+            IList<Software> software = dao.Lista();
+            ViewBag.Software = software;
+
             return View();
         }
         public ActionResult Remover(int id)

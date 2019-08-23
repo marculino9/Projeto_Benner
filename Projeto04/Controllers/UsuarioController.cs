@@ -1,5 +1,6 @@
 ﻿using Projeto02.DAO;
 using Projeto02.Models;
+using Projeto02.Models.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace Projeto02.Controllers
             if (usuario != null)
             {
                 Session["usuarioLogado"] = usuario;
+                Session["TipoPerfil"] = usuario.Funcionario.TipoPerfil;
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -59,6 +61,14 @@ namespace Projeto02.Controllers
             IList<Usuario> usuario = dao.Lista();
             ViewBag.Usuario = usuario;
             return View();
+        }
+
+        public ActionResult Remover(int id)
+        {
+            var dao = new UsuarioDAO();
+            Usuario usuario = dao.BuscaPorIdWhere(id);
+            dao.Remover(usuario);
+            return RedirectToAction("Index");
         }
     }
 }

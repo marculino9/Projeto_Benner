@@ -11,18 +11,15 @@
     <tbody>
         @foreach (var usuario in ViewBag.Usuario)
         {
-            <tr>
-                <td>@usuario.Id</td>
-                <td>@usuario.Login</td>
-                <td>@usuario.Senha</td>
-                <td>@usuario.Funcionario.Nome</td>
-                @*<td>
-                    <a href="Equipe/Alterar/@usuario.Id">Atualizar</a>
-                </td>
-                <td>
-                    <a href="Equipe/Remover/@usuario.Id">Remover</a>
-                </td>*@
-            </tr>
+        <tr>
+            <td>@usuario.Id</td>
+            <td>@usuario.Login</td>
+            <td>@usuario.Senha</td>
+            <td>@usuario.Funcionario.Nome</td>
+            <td>
+                <a class="btn btn-primary" href="Usuario/Remover/@usuario.Id">Remover</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

@@ -23,6 +23,7 @@ namespace Projeto02.Models
         [NotMapped]
         public int CodigoVerificacao { get; set; }
         [Required]
+        public virtual IList<SolicitacaoLicenca> SolicitacaoLicencas { get; set; }
         public virtual IList<Licenca> Licencas { get; set; }
     }
 }

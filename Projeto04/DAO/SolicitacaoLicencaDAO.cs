@@ -10,63 +10,44 @@ namespace Projeto02.DAO
 {
     public class SolicitacaoLicencaDAO
     {
+        Context contexto = new Context();
+
         public void Adiciona(SolicitacaoLicenca solicitacaoLicenca)
         {
-            using (var context = new Context())
-            {
-                context.Add(solicitacaoLicenca);
-                context.SaveChanges();
-            }
+            contexto.Add(solicitacaoLicenca);
+            contexto.SaveChanges();
         }
         public void Remover(SolicitacaoLicenca solicitacaoLicenca)
         {
-            using (var context = new Context())
-            {
-                context.SolicitacaoLicencas.Remove(solicitacaoLicenca);
-                context.SaveChanges();
-            }
+            contexto.SolicitacaoLicencas.Remove(solicitacaoLicenca);
+            contexto.SaveChanges();
         }
 
         public IList<SolicitacaoLicenca> Lista()
         {
-            using (var contexto = new Context())
-            {
-                return contexto.SolicitacaoLicencas.ToList();
-            }
+            return contexto.SolicitacaoLicencas.Include(t => t.Software).Include(t => t.Usuario).ToList();
         }
 
         public SolicitacaoLicenca BuscaPorId(int id)
         {
-            using (var contexto = new Context())
-            {
-                return contexto.SolicitacaoLicencas.Find(id);
-            }
+            return contexto.SolicitacaoLicencas.Find(id);
         }
 
         public SolicitacaoLicenca BuscaPorIdWhere(int id)
         {
-            using (var contexto = new Context())
-            {
-                return contexto.SolicitacaoLicencas.Where(u => u.Id == id).FirstOrDefault();
-            }
+            return contexto.SolicitacaoLicencas.Where(u => u.Id == id).FirstOrDefault();
         }
 
         public void Atualiza(SolicitacaoLicenca solicitacaoLicenca)
         {
-            using (var contexto = new Context())
-            {
-                contexto.Entry(solicitacaoLicenca).State = EntityState.Modified;
-                contexto.SolicitacaoLicencas.Update(solicitacaoLicenca);
-                contexto.SaveChanges();
-            }
+            contexto.Entry(solicitacaoLicenca).State = EntityState.Modified;
+            contexto.SolicitacaoLicencas.Update(solicitacaoLicenca);
+            contexto.SaveChanges();
         }
 
-        public SolicitacaoLicenca Busca(string nome, int protocolo)
+        public SolicitacaoLicenca Busca(int protocolo)
         {
-            using (var contexto = new Context())
-            {
-                return contexto.SolicitacaoLicencas.FirstOrDefault(u => u.Protocolo == protocolo);
-            }
+            return contexto.SolicitacaoLicencas.FirstOrDefault(u => u.Protocolo == protocolo);
         }
     }
 }

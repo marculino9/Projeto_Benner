@@ -1,0 +1,39 @@
+﻿<h2>Lista de Pedidos do sistema.</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome da Licenca</th>
+            <th>Data Inicio</th>
+            <th>Data Termino</th>
+            <th>Protocolo</th>
+            <th>Motivo de Uso</th>
+            <th>Status</th>
+            <th>Usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var solicitacaoLicenca in ViewBag.SolicitacaoLicenca)
+        {
+            <tr>
+                <td>@solicitacaoLicenca.Id</td>
+                <td>@solicitacaoLicenca.Software.NomeSoftware</td>
+                <td>@solicitacaoLicenca.DataInicio</td>
+                <td>@solicitacaoLicenca.DataTermino</td>
+                <td>@solicitacaoLicenca.Protocolo</td>
+                <td>@solicitacaoLicenca.MotivoDeUso</td>
+                <td>@solicitacaoLicenca.Status</td>
+                <td>@solicitacaoLicenca.Usuario.Login</td>
+                <td>
+                    <a class="btn btn-primary" href="SolicitacaoLicenca/Alterar/@solicitacaoLicenca.Id">Atualizar</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="SolicitacaoLicenca/Remover/@solicitacaoLicenca.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<td>
+    <a class="btn btn-primary" href="SolicitacaoLicenca/Form/">Adicionar</a>
+</td>

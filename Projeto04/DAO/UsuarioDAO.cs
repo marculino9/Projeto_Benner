@@ -33,6 +33,11 @@ namespace Projeto02.DAO
             return contexto.Usuarios.Find(id);
         }
 
+        public Usuario BuscaPorIdWhere(int id)
+        {
+            return contexto.Usuarios.Where(u => u.Id == id).FirstOrDefault();
+        }
+
         public void Atualiza(Usuario usuarios)
         {
             contexto.Entry(usuarios).State = EntityState.Modified;
@@ -41,7 +46,7 @@ namespace Projeto02.DAO
         }
         public Usuario Busca(string login, string senha)
         {
-            return contexto.Usuarios.FirstOrDefault(u => u.Login == login && u.Senha == senha);
+            return contexto.Usuarios.Include(t =>t.Funcionario).FirstOrDefault(u => u.Login == login && u.Senha == senha);
         }
     }
 }

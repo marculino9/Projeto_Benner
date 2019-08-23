@@ -2,18 +2,26 @@
 <div>
     <form action="/Licenca/Adiciona" method="post">
         <label for="chave">Chave:</label>
-        <input type="text" name="chave" id="chave" class="form-control" />
+        <input type="text" name="Licenca.chave" id="chave" class="form-control" />
         <br />
         <label for="quantidade">Quantidade:</label>
-        <input type="text" name="quantidade" id="quantidade" class="form-control" />
+        <input type="text" name="Licenca.quantidade" id="quantidade" class="form-control" />
         <br />
-        <label for="softwareId">SoftwareId:</label>
-        <input type="text" name="softwareId" id="softwareId" class="form-control" />
-        <br />
+        <label for="SoftwareId">SoftwareId:</label>
+        <select id="SoftwareId" name="Licenca.SoftwareId" class="form-control">
+            @foreach (var software in ViewBag.Software)
+            {
+                <option value="@software.Id" selected="@software.Id.Equals(ViewBag.SoftwareId)">
+                    @software.NomeSoftware
+                </option>
+
+            }
+        </select>
+        @*<br />
         <label for="usuarioId">UsuarioId:</label>
-        <input type="text" name="usuarioId" id="usuarioId" class="form-control" />
+        <input type="text" name="usuarioId" id="usuarioId" class="form-control" />*@
         <br />
-        <input type="submit" value="Cadastrar" />
+        <input class="btn btn-primary" type="submit" value="Cadastrar" />
 
     </form>
 </div>

@@ -16,15 +16,18 @@
                 <td>@licenca.Id</td>
                 <td>@licenca.Chave</td>
                 <td>@licenca.Quantidade</td>
-                <td>@licenca.Software.Nome</td>
+                <td>@licenca.Software.NomeSoftware</td>
                 @*<td>@licenca.Usuario.UsuarioId</td>*@
                 <td>
-                    <a href="Licenca/Alterar/@licenca.Id">Atualizar</a>
+                    <a class="btn btn-primary" href="Licenca/Alterar/@licenca.Id">Atualizar</a>
                 </td>
                 <td>
-                    <a href="Licenca/Remover/@licenca.Id">Remover</a>
+                    <a class="btn btn-primary" href="Licenca/Remover/@licenca.Id">Remover</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<td>
+    <a class="btn btn-primary" href="Form/">Adicionar</a>
+</td>

@@ -1,19 +1,22 @@
-﻿<div class="navbar-collapse collapse">
-    <ul class="nav navbar-header">
-        <li>@Html.ActionLink("Cadastrar Cargo", "Form", "Cargo")</li>
-        <li>@Html.ActionLink("Cadastrar Equipe", "Form", "Equipe")</li>
-        <li>@Html.ActionLink("Cadastrar Funcionario", "Form", "Funcionario")</li>
-        <li>@Html.ActionLink("Cadastrar Software", "Form", "Software")</li>
-        <li>@Html.ActionLink("Cadastrar Licenca", "Form", "Licenca")</li>
-        <li>@Html.ActionLink("Cadastrar Usuario", "Form", "Usuario")</li>
-    </ul>
-    <ul class="nav navbar-header navbar-right">
-        <li>@Html.ActionLink("Mostrar Cargo", "Index", "Cargo")</li>
-        <li>@Html.ActionLink("Mostrar Equipe", "Index", "Equipe")</li>
-        <li>@Html.ActionLink("Mostrar Funcionario", "Index", "Funcionario")</li>
-        <li>@Html.ActionLink("Mostrar Software", "Index", "Software")</li>
-        <li>@Html.ActionLink("Mostrar Licenca", "Index", "Licenca")</li>
-        <li>@Html.ActionLink("Mostrar Usuario", "Visualiza", "Usuario")</li>
-    </ul>
+﻿<h1 class="fixed-top text-center">Tela de Cadastro</h1>
 
+<div class="navbar navbar-expand-lg navbar-transparent">
+    @*<ul class="nav navbar-header">
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Cargo", "Form", "Cargo")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Equipe", "Form", "Equipe")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Funcionario", "Form", "Funcionario")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Software", "Form", "Software")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Licenca", "Form", "Licenca")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Usuario", "Form", "Usuario")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Cadastrar Pedido", "Form", "SolicitacaoLicenca")</li>
+    </ul>*@
+    <ul class="nav navbar-header navbar-right">
+        <li class="btn btn-primary" >@Html.ActionLink("Cargos", "Index", "Cargo")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Equipes", "Index", "Equipe")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Funcionarios", "Index", "Funcionario")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Softwares", "Index", "Software")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Licencas", "Index", "Licenca")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Usuarios", "Visualiza", "Usuario")</li>
+        <li class="btn btn-primary" >@Html.ActionLink("Pedidos", "Index", "SolicitacaoLicenca")</li>
+    </ul>
 </div>

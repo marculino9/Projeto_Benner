@@ -98,7 +98,7 @@ namespace Projeto02.Migrations
 
                     b.Property<int>("SoftwareId");
 
-                    b.Property<int>("UsuarioId");
+                    b.Property<int?>("UsuarioId");
 
                     b.HasKey("Id");
 
@@ -142,7 +142,7 @@ namespace Projeto02.Migrations
 
                     b.Property<int>("SoftwareId");
 
-                    b.Property<int>("StatusId");
+                    b.Property<int>("Status");
 
                     b.Property<int>("UsuarioId");
 
@@ -150,25 +150,9 @@ namespace Projeto02.Migrations
 
                     b.HasIndex("SoftwareId");
 
-                    b.HasIndex("StatusId");
-
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("SolicitacaoLicencas");
-                });
-
-            modelBuilder.Entity("Projeto02.Models.Status", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("NomeStatus")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Status");
                 });
 
             modelBuilder.Entity("Projeto02.Models.Usuario", b =>
@@ -227,10 +211,9 @@ namespace Projeto02.Migrations
                         .HasForeignKey("SoftwareId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Projeto02.Models.Usuario", "Usuario")
+                    b.HasOne("Projeto02.Models.Usuario")
                         .WithMany("Licencas")
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UsuarioId");
                 });
 
             modelBuilder.Entity("Projeto02.Models.SolicitacaoLicenca", b =>
@@ -240,13 +223,8 @@ namespace Projeto02.Migrations
                         .HasForeignKey("SoftwareId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Projeto02.Models.Status", "Status")
-                        .WithMany()
-                        .HasForeignKey("StatusId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Projeto02.Models.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("SolicitacaoLicencas")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

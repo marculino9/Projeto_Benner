@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Projeto02.Filtro;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Projeto02
@@ -7,6 +8,7 @@ namespace Projeto02
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            //filters.Add(new AutorizacaoFilterAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }

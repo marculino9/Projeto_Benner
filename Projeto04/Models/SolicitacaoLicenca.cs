@@ -1,3 +1,4 @@
+using Projeto02.Models.Enum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -24,9 +25,7 @@ namespace Projeto02.Models
         public int UsuarioId { get; set; }
         //Motivo de uso
         public string MotivoDeUso { get; set; }
-        [Required] 
-        public virtual Status Status { get; set; }
-        [Required]//Id do status
-        public int StatusId { get; set; }
+        [Required]
+        public Status Status { get; set; }
     }
 }

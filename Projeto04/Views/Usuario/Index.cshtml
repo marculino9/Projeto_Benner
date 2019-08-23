@@ -1,12 +1,39 @@
-﻿<h3>Logar</h3>
-<form action="/Usuario/Autentica" method="post">
-    <label for="login">Login:</label>
-    <input type="text" name="login" id="login" class="form-control" />
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title MDL</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/Content/css/material-dashboard.css" rel="stylesheet" />
+    <link href="~/Content/demo/demo.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+
+</head>
+<body class="dark-edition">
+    <h3>Logar</h3>
+    <form action="/Usuario/Autentica" method="post">
+        <label for="login">Login:</label>
+        <input type="text" name="login" id="login" class="form-control" />
 
 
-    <label for="senha">Senha:</label>
-    <input type="password" name="senha" id="senha" class="form-control" />
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" class="form-control" />
 
-    <input type="submit" value="Logar" />
+        <input class="btn btn-primary" type="submit" value="Logar" />
 
-</form>
+    </form>
+    <td>
+        <a class="btn btn-primary" href="Form/">Novo Usuario</a>
+    </td>
+</body>
+</html>

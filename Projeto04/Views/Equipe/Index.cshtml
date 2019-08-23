@@ -13,14 +13,17 @@
             <tr>
                 <td>@equipe.Id</td>
                 <td>@equipe.NomeEquipe</td>
-                <td>@equipe.Gestor.Funcionario.TipoPerfil</td>
+                @*<td>@equipe.Gestor.Funcionario.TipoPerfil</td>*@
                 <td>
-                    <a href="Equipe/Alterar/@equipe.Id">Atualizar</a>
+                    <a  class="btn btn-primary" href="Equipe/Alterar/@equipe.Id">Atualizar</a>
                 </td>
                 <td>
-                    <a href="Equipe/Remover/@equipe.Id">Remover</a>
+                    <a  class="btn btn-primary" href="Equipe/Remover/@equipe.Id">Remover</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<td>
+    <a class="btn btn-primary" href="Form/">Adicionar</a>
+</td>
