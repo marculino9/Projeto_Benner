@@ -1,4 +1,5 @@
 ﻿using Projeto02.DAO;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class SoftwareController : Controller
     {
         // GET: Software
@@ -21,9 +23,13 @@ namespace Projeto02.Controllers
         [HttpPost]
         public ActionResult Adiciona(Software software)
         {
-            var dao = new SoftwareDAO();
-            dao.Adiciona(software);
-            return View("Adiciona");
+            if (ModelState.IsValid)
+            {
+                var dao = new SoftwareDAO();
+                dao.Adiciona(software);
+                return View("Adiciona");
+            }
+            return View("Form");
         }
 
         public ActionResult Form()
@@ -56,7 +62,7 @@ namespace Projeto02.Controllers
         }
 
         [HttpPost]
-        public ActionResult Atualiza([Bind(Include = "Id, Nome, Versao")] Software software)
+        public ActionResult Atualiza([Bind(Include = "Id, NomeSoftware, Versao")] Software software)
         {
             var dao = new SoftwareDAO();
             dao.Atualiza(software);

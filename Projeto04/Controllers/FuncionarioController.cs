@@ -1,5 +1,6 @@
 ﻿using Projeto02.DAO;
 using Projeto02.ExtensionMethods;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using Projeto02.Models.Enum;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class FuncionarioController : Controller
     {
         //GET: Funcionario
@@ -24,9 +26,16 @@ namespace Projeto02.Controllers
         [HttpPost]
         public ActionResult Adiciona(Funcionario funcionario)
         {
-            FuncionarioDAO dao = new FuncionarioDAO();
-            dao.Adiciona(funcionario);
-            return View("Adiciona");
+            if (ModelState.IsValid)
+            {
+                var random = new Random();
+                FuncionarioDAO dao = new FuncionarioDAO();
+                funcionario.CodigoVerificacao = random.Next();
+                dao.Adiciona(funcionario);
+                return View("Adiciona");
+            }
+
+            return View("Form");
         }
 
         public ActionResult Form()

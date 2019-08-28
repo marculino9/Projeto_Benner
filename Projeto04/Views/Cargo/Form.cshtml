@@ -1,8 +1,17 @@
-﻿<h3 class="form- active">Cadastrar Cargo</h3>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+@model Projeto02.Models.Cargo
+
+<h3 class="form- active">Cadastrar Cargo</h3>
 <div>
+   
     <form action="/Cargo/Adiciona" method="post">
+        @Html.ValidationSummary(true)
         <label for="nomeCargo">Nome:</label>
-        <input type="text" name="nomeCargo" id="nomeCargo" class="form-control" />
+        @*<input type="text" name="nomeCargo" id="nomeCargo" class="form-control" />*@
+        @Html.EditorFor(model => model.NomeCargo)
+        @Html.ValidationMessageFor(model => model.NomeCargo)
         <br />
         <input class="btn btn-primary" type="submit" value="Cadastrar" />
 

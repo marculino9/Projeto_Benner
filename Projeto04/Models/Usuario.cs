@@ -25,5 +25,14 @@ namespace Projeto02.Models
         [Required]
         public virtual IList<SolicitacaoLicenca> SolicitacaoLicencas { get; set; }
         public virtual IList<Licenca> Licencas { get; set; }
+
+        [NotMapped]
+        public int Adm { get; set; }
+
+        [NotMapped]
+        public int Ges { get; set; }
+
+        [NotMapped]
+        public int Func { get; set; }
     }
 }

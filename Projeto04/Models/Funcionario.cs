@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -17,7 +18,7 @@ namespace Projeto02.Models
         public int EquipeId { get; set; }
         [Required] //Cargo
         public virtual Cargo Cargo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "* Cargo é obrigatório")]
         public int CargoId { get; set; }
         [Required] //Nome do computador do funcionario
         public string Maquina { get; set; }
@@ -25,7 +26,7 @@ namespace Projeto02.Models
         public int CodigoVerificacao { get; set; } //AQUI
         [Required]
         public virtual IList<Usuario> Usuarios { get; set; } 
-
+        [Required(ErrorMessage ="* Tipo de perfil é obrigatório")]
         public TipoPerfil TipoPerfil { get; set; }
     }
 }

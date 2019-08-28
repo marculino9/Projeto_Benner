@@ -1,11 +1,21 @@
-﻿<h3 class="form- active">Cadastrar Licenca</h3>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+@model Projeto02.Models.Licenca
+
+<h3 class="form- active">Cadastrar Licenca</h3>
 <div>
     <form action="/Licenca/Adiciona" method="post">
+        @Html.ValidationSummary(true)
         <label for="chave">Chave:</label>
-        <input type="text" name="Licenca.chave" id="chave" class="form-control" />
+        @*<input type="text" name="Licenca.chave" id="chave" class="form-control" />*@
+        @Html.EditorFor(model => model.Chave)
+        @Html.ValidationMessageFor(model => model.Chave)
         <br />
         <label for="quantidade">Quantidade:</label>
-        <input type="text" name="Licenca.quantidade" id="quantidade" class="form-control" />
+        @*<input type="text" name="Licenca.quantidade" id="quantidade" class="form-control" />*@
+        @Html.EditorFor(model => model.Quantidade)
+        @Html.ValidationMessageFor(model => model.Quantidade)
         <br />
         <label for="SoftwareId">SoftwareId:</label>
         <select id="SoftwareId" name="Licenca.SoftwareId" class="form-control">
@@ -17,6 +27,7 @@
 
             }
         </select>
+        @Html.ValidationMessageFor(model => model.SoftwareId)
         @*<br />
         <label for="usuarioId">UsuarioId:</label>
         <input type="text" name="usuarioId" id="usuarioId" class="form-control" />*@

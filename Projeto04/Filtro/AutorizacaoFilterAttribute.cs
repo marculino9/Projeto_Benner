@@ -1,4 +1,6 @@
-﻿using Projeto02.Models.Enum;
+﻿using Projeto02.DAO;
+using Projeto02.Models;
+using Projeto02.Models.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,30 +14,39 @@ namespace Projeto02.Filtro
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            object usuario = filterContext.HttpContext.Session["usuarioLogado"];
-            object tipoPerfil = filterContext.HttpContext.Session["TipoPerfil"];
+
+            //object usuario = filterContext.HttpContext.Session["userAdm"];
+            //object tipoPerfil = filterContext.HttpContext.Session["TipoPerfil"];
+            object logado = filterContext.HttpContext.Session["usuarioLogin"];
 
             //object perfil = ((TipoPerfil)tipoPerfil == TipoPerfil.Administrador);
 
-            if (usuario == null)
+            if (logado == null)
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary(
-                        new { controller = "Usuario", action = "Index" }
+                        new { controller = "Login", action = "Login" }
                         )
                     );
-            }
-            if (usuario != null)
-            {
-                if ((TipoPerfil)tipoPerfil == TipoPerfil.Administrador)
-                {
-                    filterContext.Result = new RedirectToRouteResult(
-                        new RouteValueDictionary(
-                            new { controller = "Home", action = "Adm" }
-                            )
-                        );
-                }
-            }
+            }//else
+            //{
+            //    filterContext.Result = new RedirectToRouteResult(
+            //        new RouteValueDictionary(
+            //            new { controller = "Login", action = "Login" }
+            //            )
+            //        );
+            //}
+            //if (usuario != null)
+            //{
+            //    if ((TipoPerfil)tipoPerfil == TipoPerfil.Administrador)
+            //    {
+            //        filterContext.Result = new RedirectToRouteResult(
+            //            new RouteValueDictionary(
+            //                new { controller = "Home", action = "Adm" }
+            //                )
+            //            );
+            //    }
+            //}
 
             //if (usuario != null)
             //{

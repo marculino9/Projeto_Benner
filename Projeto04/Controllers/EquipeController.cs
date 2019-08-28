@@ -1,4 +1,5 @@
 ﻿using Projeto02.DAO;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using Projeto02.Models.Enum;
 using System;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class EquipeController : Controller
     {
         // GET: Equipe
@@ -22,12 +24,16 @@ namespace Projeto02.Controllers
         [HttpPost]
         public ActionResult Adiciona(Equipe equipe)
         {
-            EquipeDAO dao = new EquipeDAO();
-            dao.Adiciona(equipe);
-            return View("Adiciona");
+            if (ModelState.IsValid)
+            {
+                EquipeDAO dao = new EquipeDAO();
+                dao.Adiciona(equipe);
+                return View("Adiciona");
+            }
+            return View("Form");
         }
 
-        
+
 
         public ActionResult Form()
         {

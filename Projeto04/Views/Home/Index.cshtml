@@ -1,3 +1,25 @@
-﻿@{
+﻿@using Projeto02.Models.Enum
+@{
     ViewBag.Title = "Home Page";
 }
+
+@if (Session["usuarioLogado"] == null)
+{
+    if ((TipoPerfil)Session["TipoPerfil"] == TipoPerfil.Administrador)
+    {
+        <p>
+            <h3>Bem vindo ao sistema grande administrador</h3> <h1>
+                @Session["nomeUsuario"].ToString()
+            </h1>
+        </p>
+    }
+    else
+    {
+        <p>
+            <h3>Bem vindo ao sistema</h3> <h1>
+                @Session["nomeUsuario"].ToString()
+            </h1>
+        </p>
+    }
+}
+

@@ -396,5 +396,3 @@ D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csproj.CoreC
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csproj.CopyComplete
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.dll
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.pdb
-D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\Projeto02.dll.CodeAnalysisLog.xml
-D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\Projeto02.dll.lastcodeanalysissucceeded

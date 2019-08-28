@@ -1,42 +1,45 @@
-﻿
-    <form action="/SolicitacaoLicenca/Atualiza/@ViewBag.SolicitacaoLicenca.Id" method="post">
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
 
-        <label for="SoftwareId">Software Id: </label>
-        <select id="SoftwareId" name="solicitacaoLicenca.SoftwareId" class="form-control">
-            @foreach (var software in ViewBag.Software)
-            {
-                <option value="@software.Id" selected="@software.Id.Equals(ViewBag.SolicitacaoLicenca.SoftwareId)">
-                    @software.NomeSoftware
-                </option>
-            }
-        </select>
+<form action="/SolicitacaoLicenca/Atualiza/@ViewBag.SolicitacaoLicenca.Id" method="post">
 
-        <label for="DataInicio">Data Inicio: </label>
-        <input type="date" id="DataInicio" value="@ViewBag.SolicitacaoLicenca.DataInicio" name="solicitacaoLicenca.DataInicio" class="form-control" />
+    <label for="SoftwareId">Software Id: </label>
+    <select id="SoftwareId" name="solicitacaoLicenca.SoftwareId" class="form-control">
+        @foreach (var software in ViewBag.Software)
+        {
+            <option value="@software.Id" selected="@software.Id.Equals(ViewBag.SolicitacaoLicenca.SoftwareId)">
+                @software.NomeSoftware
+            </option>
+        }
+    </select>
 
-        <label for="DataTermino">Data Termino: </label>
-        <input type="date" id="DataTermino" value="@ViewBag.SolicitacaoLicenca.DataTermino" name="solicitacaoLicenca.DataTermino" class="form-control" />
+    <label for="DataInicio">Data Inicio: </label>
+    <input type="date" id="DataInicio" value="@ViewBag.SolicitacaoLicenca.DataInicio" name="solicitacaoLicenca.DataInicio" class="form-control" />
 
-        <label for="MotivoDeUso">Motivo De Uso: </label>
-        <input id="MotivoDeUso" value="@ViewBag.SolicitacaoLicenca.MotivoDeUso" name="solicitacaoLicenca.MotivoDeUso" class="form-control" />
+    <label for="DataTermino">Data Termino: </label>
+    <input type="date" id="DataTermino" value="@ViewBag.SolicitacaoLicenca.DataTermino" name="solicitacaoLicenca.DataTermino" class="form-control" />
 
-        <label for="Status">Status:</label>
-        <select id="Status" name="solicitacaoLicenca.Status" class="form-control">
-            @foreach (var status in ViewBag.ListaEnum)
-            {
-                <option value="@status.Value"
-                        selected="@Convert.ToInt32(status.Value).Equals(Convert.ToInt32(ViewBag.SolicitacaoLicenca.Status))">
-                    @status.Text
-                </option>
-            }
-        </select>
+    <label for="MotivoDeUso">Motivo De Uso: </label>
+    <input id="MotivoDeUso" value="@ViewBag.SolicitacaoLicenca.MotivoDeUso" name="solicitacaoLicenca.MotivoDeUso" class="form-control" />
 
-        <label for="UsuarioId">Usuario: </label>
-        <input id="UsuarioId" value="@ViewBag.SolicitacaoLicenca.UsuarioId" name="solicitacaoLicenca.UsuarioId" class="form-control" />
+    <label for="Status">Status:</label>
+    <select id="Status" name="solicitacaoLicenca.Status" class="form-control">
+        @foreach (var status in ViewBag.ListaEnum)
+        {
+            <option value="@status.Value"
+                    selected="@Convert.ToInt32(status.Value).Equals(Convert.ToInt32(ViewBag.SolicitacaoLicenca.Status))">
+                @status.Text
+            </option>
+        }
+    </select>
 
-        <input class="btn btn-primary" type="submit" value="Alterar" />
+    <label for="UsuarioId">Usuario: </label>
+    <input id="UsuarioId" value="@ViewBag.SolicitacaoLicenca.UsuarioId" name="solicitacaoLicenca.UsuarioId" class="form-control" />
 
-    </form>
+    <input class="btn btn-primary" type="submit" value="Alterar" />
+
+</form>
 
 
 

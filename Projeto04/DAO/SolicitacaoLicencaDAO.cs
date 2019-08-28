@@ -33,6 +33,14 @@ namespace Projeto02.DAO
             return contexto.SolicitacaoLicencas.Find(id);
         }
 
+        public int SelecionarNumeroMaiorProtocolo()
+        {
+            if (contexto.SolicitacaoLicencas.Count() == 0)
+                return 0;
+            else
+                return contexto.SolicitacaoLicencas.Max(r => r.Protocolo);
+        }
+
         public SolicitacaoLicenca BuscaPorIdWhere(int id)
         {
             return contexto.SolicitacaoLicencas.Where(u => u.Id == id).FirstOrDefault();

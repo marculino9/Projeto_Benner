@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Projeto02.Controllers
 {
@@ -24,6 +25,7 @@ namespace Projeto02.Controllers
             if (usuario != null)
             {
                 Session["usuarioLogado"] = usuario;
+                Session["nomeUsuario"] = usuario.Funcionario.Nome;
                 Session["TipoPerfil"] = usuario.Funcionario.TipoPerfil;
                 return RedirectToAction("Index", "Home");
             }
@@ -69,6 +71,13 @@ namespace Projeto02.Controllers
             Usuario usuario = dao.BuscaPorIdWhere(id);
             dao.Remover(usuario);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Login", "Login");
         }
     }
 }

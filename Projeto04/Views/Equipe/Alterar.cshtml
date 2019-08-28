@@ -1,9 +1,12 @@
-﻿
-    <form action="/Equipe/Atualiza/@ViewBag.Equipe.Id" method="post">
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
 
-        <label for="nomeEquipe">Nome: </label>
-        <input id="nomeEquipe" value="@ViewBag.Equipe.NomeEquipe" name="nomeEquipe" class="form-control" />
+<form action="/Equipe/Atualiza/@ViewBag.Equipe.Id" method="post">
 
-        <input  class="btn btn-primary" type="submit" value="Atualizar" />
+    <label for="nomeEquipe">Nome: </label>
+    <input id="nomeEquipe" value="@ViewBag.Equipe.NomeEquipe" name="nomeEquipe" class="form-control" />
 
-    </form>
+    <input class="btn btn-primary" type="submit" value="Atualizar" />
+
+</form>

@@ -208,6 +208,7 @@
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LicencaController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\SoftwareController.cs" />
     <Compile Include="Controllers\SolicitacaoLicencaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -238,6 +239,7 @@
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Gestor.cs" />
     <Compile Include="Models\Licenca.cs" />
+    <Compile Include="Models\Roles.cs" />
     <Compile Include="Models\Software.cs" />
     <Compile Include="Models\SolicitacaoLicenca.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -279,6 +281,7 @@
     <Content Include="Content\js\core\popper.min.js" />
     <Content Include="Content\js\material-dashboard.js" />
     <Content Include="Content\js\material-dashboard.min.js" />
+    <Content Include="Content\js\pesquisa.js" />
     <Content Include="Content\js\plugins\bootstrap-notify.js" />
     <Content Include="Content\js\plugins\chartist.min.js" />
     <Content Include="Content\js\plugins\perfect-scrollbar.jquery.min.js" />
@@ -581,6 +584,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\SolicitacaoLicenca\Licenca.cshtml" />
     <Content Include="Views\Usuario\Autentica.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Shared\_AdmLayout.cshtml" />
+    <Content Include="Views\Home\Gestor.cshtml" />
+    <Content Include="Views\Shared\_GestorLayout.cshtml" />
+    <Content Include="Views\SolicitacaoLicenca\GestorLicenca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

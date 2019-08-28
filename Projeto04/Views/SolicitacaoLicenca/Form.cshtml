@@ -1,4 +1,5 @@
-﻿@model Projeto02.Models.SolicitacaoLicenca
+﻿
+@model Projeto02.Models.SolicitacaoLicenca
 
 <h3 class="form- active">Cadastrar Pedidos</h3>
 <div>
@@ -22,23 +23,23 @@
         <input type="date" name="SolicitacaoLicenca.DataTermino" id="datatermino" class="form-control" />
 
         @*<label for="status">Status:</label>
-        <select id="status" name="SolicitacaoLicenca.Status" class="form-control">
-            <option selected="selected" value="">Selecione o Status</option>
-            @foreach (var status in ViewBag.ListaEnum)
-            {
-                <option value="@status.Value">
-                    @status.Text
-                </option>
-            }
-        </select>*@
+            <select id="status" name="SolicitacaoLicenca.Status" class="form-control">
+                <option selected="selected" value="">Selecione o Status</option>
+                @foreach (var status in ViewBag.ListaEnum)
+                {
+                    <option value="@status.Value">
+                        @status.Text
+                    </option>
+                }
+            </select>*@
 
         <label for="motivoDeUso">Motivo De Uso:</label>
         <input type="text" name="SolicitacaoLicenca.MotivoDeUso" id="motivoDeUso" class="form-control" />
         <br />
-        <label for="usuarioId">UsuarioId:</label>
-            <input type="text" name="SolicitacaoLicenca.UsuarioId" id="usuarioId" class="form-control" />
+        @*<label for="usuarioId">UsuarioId:</label>
+        <input type="text" name="SolicitacaoLicenca.UsuarioId" id="usuarioId" class="form-control" />*@
 
-        <input  class="btn btn-primary" type="submit" value="Completar" />
+        <input class="btn btn-primary" type="submit" value="Completar" />
 
     </form>
 </div>

@@ -1,0 +1,17 @@
+﻿
+@{    Layout = "~/Views/Shared/_GestorLayout.cshtml";
+}
+
+@using Projeto02.Models.Enum
+@if (Session["usuarioLogado"] == null)
+{
+    if ((TipoPerfil)Session["TipoPerfil"] == TipoPerfil.Gestor)
+    {
+        <p>
+            <h3>Bem vindo ao sistema grande gestor</h3> <h1>
+                @Session["nomeUsuario"].ToString()
+            </h1>
+        </p>
+    }
+}
+

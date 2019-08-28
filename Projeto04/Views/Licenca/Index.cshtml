@@ -1,4 +1,8 @@
-﻿<h2>Lista de Licencas do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<h2>Lista de Licencas do sistema.</h2>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -19,10 +23,10 @@
                 <td>@licenca.Software.NomeSoftware</td>
                 @*<td>@licenca.Usuario.UsuarioId</td>*@
                 <td>
-                    <a class="btn btn-primary" href="Licenca/Alterar/@licenca.Id">Atualizar</a>
+                    <a class="btn btn-primary" href="Alterar/@licenca.Id">Atualizar</a>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Licenca/Remover/@licenca.Id">Remover</a>
+                    <a class="btn btn-primary" href="Remover/@licenca.Id">Remover</a>
                 </td>
             </tr>
         }

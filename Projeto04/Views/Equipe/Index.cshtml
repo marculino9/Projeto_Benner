@@ -1,4 +1,14 @@
-﻿<h2>Lista de Equipes do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<h2>Lista de Equipes do sistema.</h2>
+
+<label class="text-uppercase">Pesquisar conselhos</label>
+<input class="form-control" type="text" name="pesquisa" id="pesquisa" placeholder="Digite o nome do conselho">
+<label style="opacity:0;">conselho</label>
+<br />
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -10,15 +20,15 @@
     <tbody>
         @foreach (var equipe in ViewBag.Equipe)
         {
-            <tr>
+            <tr class="busca">
                 <td>@equipe.Id</td>
-                <td>@equipe.NomeEquipe</td>
+                <td class="info-nome">@equipe.NomeEquipe</td>
                 @*<td>@equipe.Gestor.Funcionario.TipoPerfil</td>*@
                 <td>
-                    <a  class="btn btn-primary" href="Equipe/Alterar/@equipe.Id">Atualizar</a>
+                    <a class="btn btn-primary" href="Alterar/@equipe.Id">Atualizar</a>
                 </td>
                 <td>
-                    <a  class="btn btn-primary" href="Equipe/Remover/@equipe.Id">Remover</a>
+                    <a class="btn btn-primary" href="Remover/@equipe.Id">Remover</a>
                 </td>
             </tr>
         }
@@ -27,3 +37,5 @@
 <td>
     <a class="btn btn-primary" href="Form/">Adicionar</a>
 </td>
+
+<script type="text/javascript" src="~/Content/js/pesquisa.js"></script>

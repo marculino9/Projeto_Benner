@@ -1,4 +1,5 @@
 ﻿using Projeto02.DAO;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class CargoController : Controller
     {
         // GET: Cargo
@@ -19,11 +21,16 @@ namespace Projeto02.Controllers
             return View();
         }
         [HttpPost]
+        
         public ActionResult Adiciona(Cargo cargo)
         {
-            CargoDAO dao = new CargoDAO();
-            dao.Adiciona(cargo);
-            return View("Adiciona");
+            if (ModelState.IsValid)
+            {
+                CargoDAO dao = new CargoDAO();
+                dao.Adiciona(cargo);
+                return View("Adiciona");
+            }
+            return View("Form");
         }
         [Route("adm/CadastrarCargo")]
         public ActionResult Form()

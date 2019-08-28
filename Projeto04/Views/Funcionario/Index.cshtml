@@ -1,4 +1,8 @@
-﻿<h2>Lista de Funcionario do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<h2>Lista de Funcionario do sistema.</h2>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -25,15 +29,15 @@
                 <td>@funcionario.TipoPerfil</td>
                 @*<td>@funcionario.EhGestor</td>*@
                 <td>
-                    <a class="btn btn-primary" href="Funcionario/Alterar/@funcionario.Id">Alterar</a>
+                    <a class="btn btn-primary" href="Alterar/@funcionario.Id">Alterar</a>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Funcionario/Remover/@funcionario.Id">Remover</a>
+                    <a class="btn btn-primary" href="Remover/@funcionario.Id">Remover</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 <td>
-    <a class="btn btn-primary" href="Funcionario/Form/">Adicionar</a>
+    <a class="btn btn-primary" href="Form/">Adicionar</a>
 </td>

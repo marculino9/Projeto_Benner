@@ -7,9 +7,11 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
+
     public class HomeController : Controller
     {
-        [AutorizacaoFilter]
+        //[AutorizacaoFilter]
         public ActionResult Index()
         {
             return View();
@@ -28,10 +30,15 @@ namespace Projeto02.Controllers
 
             return View();
         }
-        [AutorizacaoFilter]
+        //[AutorizacaoFilter]
         public ActionResult Adm()
         {
 
+            return View();
+        }
+
+        public ActionResult Gestor()
+        {
             return View();
         }
     }

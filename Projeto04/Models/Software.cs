@@ -8,9 +8,9 @@ namespace Projeto02.Models
 {
     public class Software : EntityBase
     {
-        [Required] //Nome do Software
+        [Required(ErrorMessage ="Nome do software é obrigatório")] //Nome do Software
         public string NomeSoftware { get; set; }
-        [Required] //Versao do Software
+        [Required(ErrorMessage ="Versão do software é orbigatória")] //Versao do Software
         public string Versao { get; set; }
     }
 }

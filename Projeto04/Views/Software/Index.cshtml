@@ -1,4 +1,8 @@
-﻿<h2>Lista de Software do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<h2>Lista de Software do sistema.</h2>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -15,10 +19,10 @@
                 <td>@software.NomeSoftware</td>
                 <td>@software.Versao</td>
                 <td>
-                    <a class="btn btn-primary" href="Software/Alterar/@software.Id">Atualizar</a>
+                    <a class="btn btn-primary" href="Alterar/@software.Id">Atualizar</a>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Software/Remover/@software.Id">Remover</a>
+                    <a class="btn btn-primary" href="Remover/@software.Id">Remover</a>
                 </td>
             </tr>
         }

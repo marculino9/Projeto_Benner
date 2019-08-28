@@ -1,15 +1,18 @@
-﻿
-    <form action="/Licenca/Atualiza/@ViewBag.Licenca.Id" method="post">
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
 
-        <label for="chave">Chave: </label>
-        <input id="chave" value="@ViewBag.Licenca.Chave" name="chave" class="form-control" />
+<form action="/Licenca/Atualiza/@ViewBag.Licenca.Id" method="post">
 
-        <label for="quantidade">Quantidade: </label>
-        <input id="quantidade" value="@ViewBag.Licenca.Quantidade" name="quantidade" class="form-control" />
+    <label for="chave">Chave: </label>
+    <input id="chave" value="@ViewBag.Licenca.Chave" name="chave" class="form-control" />
 
-        <label for="softwareId">SoftwareId: </label>
-        <input id="softwareId" value="@ViewBag.Licenca.SoftwareId" name="softwareId" class="form-control" />
+    <label for="quantidade">Quantidade: </label>
+    <input id="quantidade" value="@ViewBag.Licenca.Quantidade" name="quantidade" class="form-control" />
 
-        <input class="btn btn-primary" type="submit" value="Atualizar" />
+    <label for="softwareId">SoftwareId: </label>
+    <input id="softwareId" value="@ViewBag.Licenca.SoftwareId" name="softwareId" class="form-control" />
 
-    </form>
+    <input class="btn btn-primary" type="submit" value="Atualizar" />
+
+</form>

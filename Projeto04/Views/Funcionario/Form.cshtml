@@ -1,9 +1,14 @@
-﻿@model Projeto02.Models.Funcionario
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+@model Projeto02.Models.Funcionario
 @using Projeto02.Models.Enum
 
 <h3 class="form- active">Cadastrar Funcionarios</h3>
 <div>
     <form action="/Funcionario/Adiciona" method="post">
+        @Html.ValidationSummary(true)
         <label for="nome">Nome:</label>
         <input type="text" name="funcionario.Nome" id="nome" class="form-control" />
 
@@ -17,6 +22,7 @@
 
             }
         </select>
+        @Html.ValidationMessageFor(model => model.EquipeId)
 
         <label for="cargo">Cargo:</label>
         <select id="cargo" name="funcionario.CargoId" class="form-control">
@@ -27,31 +33,32 @@
                 </option>
             }
         </select>
+        @Html.ValidationMessageFor(model => model.CargoId)
 
         <label for="maquina">Maquina:</label>
         <input type="text" name="funcionario.Maquina" id="maquina" class="form-control" />
 
         @*<label for="usuarioId">UsuarioId:</label>
-            <input type="text" name="funcionario.UsuarioId" id="usuarioId" class="form-control" />
+        <input type="text" name="funcionario.UsuarioId" id="usuarioId" class="form-control" />
 
-            <label for="EhGestor">Gestor:</label>
-            <input type="checkbox" name="funcionario.EhGestor" value="True" id="EhGestor" class="form-group" />*@
+        <label for="EhGestor">Gestor:</label>
+        <input type="checkbox" name="funcionario.EhGestor" value="True" id="EhGestor" class="form-group" />*@
 
-        <label for="codigoVerificacao">Codigo Verificacao:</label>
-        <input type="text" name="funcionario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />
+        @*<label for="codigoVerificacao">Codigo Verificacao:</label>
+        <input type="text" name="funcionario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />*@
 
         <div class="form-group">
             @*  @Html.LabelFor(model => model.TipoPerfil, "Tipo de Perfil", htmlAttributes: new { @class = "control-label col-md-2" })*@
 
             @*<select asp-for="Funcionario.TipoPerfil" class="form-control" asp-items="Html.GetEnumSelectList<TipoPerfil>()">
-            <option selected="selected" value="">Selecione o tipo de perfil</option>
-        </select>*@
+                <option selected="selected" value="">Selecione o tipo de perfil</option>
+            </select>*@
             @*<div class="col-md-10">
-            @Html.DropDownList("TipoPerfil", new SelectList(Enum.GetValues(typeof(TipoPerfil))), "Selecione o tipo de Perfil", new { @class = "form-control" })
-        </div>*@
+                @Html.DropDownList("TipoPerfil", new SelectList(Enum.GetValues(typeof(TipoPerfil))), "Selecione o tipo de Perfil", new { @class = "form-control" })
+            </div>*@
             @*<div class="col-md-10">
-            @Html.EnumDropDownListFor(x => x.TipoPerfil, "Selecione o tipo de Perfil", new { @class = "form-control" })
-        </div>*@
+                @Html.EnumDropDownListFor(x => x.TipoPerfil, "Selecione o tipo de Perfil", new { @class = "form-control" })
+            </div>*@
 
             <label for="TipoPerfil">Tipo de perfil:</label>
             <select id="TipoPerfil" name="funcionario.TipoPerfil" class="form-control">
@@ -63,11 +70,12 @@
                     </option>
                 }
             </select>
+            @Html.ValidationMessageFor(model => model.TipoPerfil)
 
         </div>
-        </div>
+</div>
 
-        <input class="btn btn-primary" type="submit" value="Cadastrar" />
+<input class="btn btn-primary" type="submit" value="Cadastrar" />
 
     </form>
 </div>

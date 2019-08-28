@@ -1,4 +1,14 @@
-﻿<h2>Lista de Cargos do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<h2>Lista de Cargos do sistema.</h2>
+
+<label class="text-uppercase">Pesquisar conselhos</label>
+<input class="form-control" type="text" name="pesquisa" id="pesquisa" placeholder="Digite o nome do conselho">
+<label style="opacity:0;">conselho</label>
+<br />
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -9,19 +19,21 @@
     <tbody>
         @foreach (var cargo in ViewBag.Cargo)
         {
-        <tr>
-            <td>@cargo.Id</td>
-            <td>@cargo.NomeCargo</td>
-            <td>
-                <a  class="btn btn-primary" href="Cargo/Alterar/@cargo.Id">Atualizar</a>
-            </td>
-            <td>
-                <a  class="btn btn-primary" href="Cargo/Remover/@cargo.Id">Remover</a>
-            </td>
-        </tr>
+            <tr class="busca">
+                <td>@cargo.Id</td>
+                <td class="info-nome">@cargo.NomeCargo</td>
+                <td>
+                    <a class="btn btn-primary" href="Alterar/@cargo.Id">Atualizar</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="Remover/@cargo.Id">Remover</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
 <td>
     <a class="btn btn-primary" href="Form/">Adicionar</a>
 </td>
+
+<script type="text/javascript" src="~/Content/js/pesquisa.js"></script>

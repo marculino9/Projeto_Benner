@@ -1,4 +1,5 @@
 ﻿using Projeto02.DAO;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class LicencaController : Controller
     {
         // GET: Licenca
@@ -21,9 +23,16 @@ namespace Projeto02.Controllers
         [HttpPost]
         public ActionResult Adiciona(Licenca licenca)
         {
-            var dao = new LicencaDAO();
-            dao.Adiciona(licenca);
-            return View("Adiciona");
+            if (ModelState.IsValid)
+            {
+                var dao = new LicencaDAO();
+                dao.Adiciona(licenca);
+                return View("Adiciona");
+            }
+            //TempData.Keep("Licenca.SoftwareId");
+            //ViewBag.Software = TempData["software"];
+            //TempData.Keep("software");
+            return View("Form");
         }
 
         public ActionResult Form()
@@ -32,6 +41,8 @@ namespace Projeto02.Controllers
             IList<Software> software = dao.Lista();
             ViewBag.Software = software;
 
+            TempData["software"] = software;
+            
             return View();
         }
         public ActionResult Remover(int id)

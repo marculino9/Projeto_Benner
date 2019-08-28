@@ -12,9 +12,9 @@ namespace Projeto02.Models
         public string Chave { get; set; }
         [Required] //Quantidade de Software
         public int Quantidade { get; set; }
-        [Required] //Software
+         //Software
         public virtual Software Software { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Software requerido")]
         public int SoftwareId { get; set; }
     }
 }

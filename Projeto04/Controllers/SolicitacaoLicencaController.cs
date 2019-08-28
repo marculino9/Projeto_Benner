@@ -1,5 +1,6 @@
 ﻿using Projeto02.DAO;
 using Projeto02.ExtensionMethods;
+using Projeto02.Filtro;
 using Projeto02.Models;
 using Projeto02.Models.Enum;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Projeto02.Controllers
 {
+    [AutorizacaoFilter]
     public class SolicitacaoLicencaController : Controller
     {
         // GET: SolicitacaoLicenca
@@ -23,19 +25,16 @@ namespace Projeto02.Controllers
 
         public ActionResult Adiciona(SolicitacaoLicenca solicitacaoLicenca)
         {
+            //Tratar pra não selecionar usuário. Pegar da SESSION, porque FUNCIONA
+            var usuario = (Usuario)Session["usuarioLogin"];
 
             var dao = new SolicitacaoLicencaDAO();
-            var ultimaSolicitacao = dao.Lista().FirstOrDefault();
-            if (ultimaSolicitacao == null)
-            {
-                var protocolo = 1;
-                solicitacaoLicenca.Protocolo = protocolo++;
-            }
-            else
-            {
-                solicitacaoLicenca.Protocolo = ultimaSolicitacao.Protocolo++;
-            }
+            var ultimoProtocolo = dao.SelecionarNumeroMaiorProtocolo();
+            
+            solicitacaoLicenca.Protocolo = ultimoProtocolo + 1;
+            solicitacaoLicenca.UsuarioId = usuario.Id;
             dao.Adiciona(solicitacaoLicenca);
+
             return View();
         }
 
@@ -95,6 +94,14 @@ namespace Projeto02.Controllers
         }
 
         public ActionResult Licenca()
+        {
+            var dao = new SolicitacaoLicencaDAO();
+            IList<SolicitacaoLicenca> solicitacaoLicenca = dao.Lista();
+            ViewBag.SolicitacaoLicenca = solicitacaoLicenca;
+            return View();
+        }
+
+        public ActionResult GestorLicenca()
         {
             var dao = new SolicitacaoLicencaDAO();
             IList<SolicitacaoLicenca> solicitacaoLicenca = dao.Lista();

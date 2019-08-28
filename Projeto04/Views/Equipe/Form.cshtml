@@ -1,13 +1,22 @@
-﻿<h3 class="form- active">Cadastrar Equipe</h3>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+@model Projeto02.Models.Equipe
+
+<h3 class="form- active">Cadastrar Equipe</h3>
 <div>
     <form action="/Equipe/Adiciona" method="post">
+        @Html.ValidationSummary(true)
+
         <label for="nomeEquipe">Equipe:</label>
         <input type="text" name="nomeEquipe" id="nomeEquipe" class="form-control" />
+        @*@Html.EditorFor(model => model.NomeEquipe)*@
+        @Html.ValidationMessageFor(model => model.NomeEquipe)
         <br />
         @*<label for="gestorId">Gestor:</label>
-        <input type="checkbox" name="gestorId" id="gestorId" class="form-group-sm" />
-        <br />*@
-        <input  class="btn btn-primary" type="submit" value="Cadastrar" />
+            <input type="checkbox" name="gestorId" id="gestorId" class="form-group-sm" />
+            <br />*@
+        <input class="btn btn-primary" type="submit" value="Cadastrar" />
 
     </form>
 </div>

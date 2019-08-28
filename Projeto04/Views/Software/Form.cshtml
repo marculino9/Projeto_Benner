@@ -1,11 +1,18 @@
-﻿<h3 class="form- active">Cadastrar Software</h3>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+@model Projeto02.Models.Software
+<h3 class="form- active">Cadastrar Software</h3>
 <div>
     <form action="/Software/Adiciona" method="post">
+        @Html.ValidationSummary(true)
         <label for="NomeSoftware">Nome:</label>
-        <input type="text" name="NomeSoftware" id="NomeSoftware" class="form-control" />
+        <input type="text" name="NomeSoftware" id="NomeSoftware" class="form-control" @*required=""*@/>       
+        @Html.ValidationMessageFor(model => model.NomeSoftware)
         <br />
         <label for="versao">Versão:</label>
-        <input type="text" name="versao" id="versao" class="form-control" />
+        <input type="text" name="versao" id="versao" class="form-control" />       
+        @Html.ValidationMessageFor(model => model.Versao)
         <br />
         <input class="btn btn-primary" type="submit" value="Cadastrar" />
 

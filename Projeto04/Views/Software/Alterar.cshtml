@@ -1,12 +1,17 @@
-﻿
-    <form action="/Software/Atualiza/@ViewBag.Software.Id" method="post">
+﻿@model Projeto02.Models.Software
 
-        <label for="nome">Nome: </label>
-        <input id="nome" value="@ViewBag.Software.Nome" name="nome" class="form-control" />
+@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
 
-        <label for="versao">Versao: </label>
-        <input id="versao" value="@ViewBag.Software.Versao" name="versao" class="form-control" />
+<form action="/Software/Atualiza/@ViewBag.Software.Id" method="post">
 
-        <input class="btn btn-primary" type="submit" value="Atualizar" />
+    <label for="NomeSoftware">Nome: </label>
+    <input id="NomeSoftware" value="@ViewBag.Software.NomeSoftware" name="NomeSoftware" class="form-control" />
 
-    </form>
+    <label for="Versao">Versao: </label>
+    <input id="Versao" value="@ViewBag.Software.Versao" name="Versao" class="form-control" />
+
+    <input class="btn btn-primary" type="submit" value="Atualizar" />
+
+</form>
