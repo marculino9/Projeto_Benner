@@ -33,8 +33,6 @@ namespace Projeto02.Controllers
             return View("Form");
         }
 
-
-
         public ActionResult Form()
         {
             var dao = new FuncionarioDAO();

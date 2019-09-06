@@ -1,7 +1,9 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdmLayout.cshtml";
 }
-
+<td>
+    <a class="btn btn-primary pull-right" href="Form/">Adicionar</a>
+</td>
 <h2>Lista de Licencas do sistema.</h2>
 <table class="table table-hover">
     <thead>
@@ -16,22 +18,37 @@
     <tbody>
         @foreach (var licenca in ViewBag.Licenca)
         {
-            <tr>
-                <td>@licenca.Id</td>
-                <td>@licenca.Chave</td>
-                <td>@licenca.Quantidade</td>
-                <td>@licenca.Software.NomeSoftware</td>
-                @*<td>@licenca.Usuario.UsuarioId</td>*@
-                <td>
-                    <a class="btn btn-primary" href="Alterar/@licenca.Id">Atualizar</a>
-                </td>
-                <td>
-                    <a class="btn btn-primary" href="Remover/@licenca.Id">Remover</a>
-                </td>
-            </tr>
+        <tr>
+            <td>@licenca.Id</td>
+            <td>@licenca.Chave</td>
+            <td>@licenca.Quantidade</td>
+            <td>@licenca.Software.NomeSoftware</td>
+
+            <td>
+                <a class="btn btn-primary" href="~/Licenca/Index" onclick="decrementa(@licenca.Id)">Decrementar</a>
+            </td>
+            @*<td>@licenca.Usuario.UsuarioId</td>*@
+            <td>
+                <a class="btn btn-primary" href="Alterar/@licenca.Id">Atualizar</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" href="Remover/@licenca.Id">Remover</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
-<td>
-    <a class="btn btn-primary" href="Form/">Adicionar</a>
-</td>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    function decrementa(licencaId) {
+        var url = "@Url.Action("DecrementaQtd","Licenca")";
+        var params = { id: licencaId };
+        $.post(url, params, atualiza);
+
+        function atualiza(resposta) {
+            var elemento = $("#quantidade" + resposta.id);
+           elemento.html(resposta.Quantidade);
+        }
+    }
+</script>

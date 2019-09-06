@@ -391,8 +391,8 @@ D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\pt-br\System.Web.Razor.resou
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\pt-br\System.Web.WebPages.resources.dll
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csprojAssemblyReference.cache
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csproj.CoreCompileInputs.cache
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csproj.CopyComplete
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.dll
 D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.pdb
+D:\Programas\C#\Visual Studio\Projeto\Projeto04\obj\Debug\Projeto02.csprojAssemblyReference.cache

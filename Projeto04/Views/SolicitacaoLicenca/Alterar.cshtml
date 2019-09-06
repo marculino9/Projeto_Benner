@@ -24,7 +24,7 @@
     <input id="MotivoDeUso" value="@ViewBag.SolicitacaoLicenca.MotivoDeUso" name="solicitacaoLicenca.MotivoDeUso" class="form-control" />
 
     <label for="Status">Status:</label>
-    <select id="Status" name="solicitacaoLicenca.Status" class="form-control">
+    <select id="Status" name="Status" class="form-control">
         @foreach (var status in ViewBag.ListaEnum)
         {
             <option value="@status.Value"
@@ -34,8 +34,8 @@
         }
     </select>
 
-    <label for="UsuarioId">Usuario: </label>
-    <input id="UsuarioId" value="@ViewBag.SolicitacaoLicenca.UsuarioId" name="solicitacaoLicenca.UsuarioId" class="form-control" />
+    @*<label for="UsuarioId">Usuario: </label>
+    <input id="UsuarioId" value="@ViewBag.SolicitacaoLicenca.UsuarioId" name="solicitacaoLicenca.UsuarioId" class="form-control" />*@
 
     <input class="btn btn-primary" type="submit" value="Alterar" />
 

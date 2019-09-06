@@ -85,11 +85,13 @@ namespace Projeto02.Controllers
         }
 
         [HttpPost]
-        public ActionResult Atualiza(int id, [Bind(Include = "Id, SoftwareId, DataInicio, DataTermino, UsuarioId, MotivoDeUso, Status")] SolicitacaoLicenca solicitacaoLicenca)
+        public ActionResult Atualiza(int id, Status status, [Bind(Include = "Id, SoftwareId, DataInicio, DataTermino, UsuarioId, MotivoDeUso, Status, Justificacao")] SolicitacaoLicenca solicitacaoLicenca)
         {
+            // Corrigir pois está liberando o Menu de ADM
             solicitacaoLicenca.Id = id;
+            solicitacaoLicenca.Status = status;
             var dao = new SolicitacaoLicencaDAO();
-            dao.Atualiza(solicitacaoLicenca);
+            dao.AlterarSituacao(solicitacaoLicenca);
             return View();
         }
 
@@ -101,12 +103,35 @@ namespace Projeto02.Controllers
             return View();
         }
 
+        public ActionResult Justificacao(int id)
+        {
+            var dao = new SolicitacaoLicencaDAO();
+            IList<SolicitacaoLicenca> solicitacaoLicenca = dao.Lista();
+            ViewBag.SolicitacaoLicenca = solicitacaoLicenca.Where(r => r.Id == id);
+            return View();
+        }
+
         public ActionResult GestorLicenca()
         {
             var dao = new SolicitacaoLicencaDAO();
             IList<SolicitacaoLicenca> solicitacaoLicenca = dao.Lista();
-            ViewBag.SolicitacaoLicenca = solicitacaoLicenca;
+            ViewBag.SolicitacaoLicenca = solicitacaoLicenca.Where(r => r.Status == Status.AguardandoAprovacaodoGestor);
             return View();
+        }
+
+        public ActionResult GesrtorAlterar(int id)
+        {
+            var dao = new SoftwareDAO();
+            IList<Software> softwares = dao.Lista();
+            ViewBag.Software = softwares;
+
+            var daoo = new SolicitacaoLicencaDAO();
+            SolicitacaoLicenca solicitacaoLicenca = daoo.BuscaPorId(id);
+            ViewBag.SolicitacaoLicenca = solicitacaoLicenca;
+
+            ViewBag.ListaEnum = Status.AguardandoAprovacaodoGestor.ToSelectList();
+
+            return View(solicitacaoLicenca);
         }
     }
 }

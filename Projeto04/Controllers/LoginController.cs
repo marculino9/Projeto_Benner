@@ -26,7 +26,8 @@ namespace Projeto02.Controllers
  
             if (usuario == null)
             {
-                return RedirectToAction("Login");
+                ModelState.AddModelError("senha", "Usuário e/ou senha inválidos");
+                return View("Login");
             }
             else if (usuario.Funcionario.TipoPerfil == TipoPerfil.Administrador)
             {

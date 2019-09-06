@@ -14,28 +14,53 @@ namespace Projeto02.Controllers
     [AutorizacaoFilter]
     public class FuncionarioController : Controller
     {
+        private IList<Equipe> listaEquipe
+        {
+            get
+            {
+                var dao = new EquipeDAO();
+                return dao.Lista();
+            }
+        }
+        private IList<Cargo> listaCargo
+        {
+            get
+            {
+                var dao = new CargoDAO();
+                return dao.Lista();
+            }
+        }
+        //private IList<Funcionario> listaTipoPerfil
+        //{
+        //    get
+        //    {
+        //        var dao = new FuncionarioDAO();
+        //        return dao.Lista();
+        //    }
+        //}
         //GET: Funcionario
         public ActionResult Index()
         {
             FuncionarioDAO dao = new FuncionarioDAO();
             IList<Funcionario> funcionarios = dao.Lista();
-            ViewBag.Funcionario = funcionarios;
+            ViewBag.Funcionario = funcionarios.Where(r => r.TipoPerfil == TipoPerfil.Funcionario);
             return View();
         }
 
         [HttpPost]
         public ActionResult Adiciona(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
-            {
-                var random = new Random();
-                FuncionarioDAO dao = new FuncionarioDAO();
-                funcionario.CodigoVerificacao = random.Next();
-                dao.Adiciona(funcionario);
-                return View("Adiciona");
-            }
 
-            return View("Form");
+            var random = new Random();
+            FuncionarioDAO dao = new FuncionarioDAO();
+            funcionario.CodigoVerificacao = random.Next();
+            dao.Adiciona(funcionario);
+            return View("Adiciona");
+            //ViewBag.Equipe = listaEquipe;
+            //ViewBag.Cargo = listaCargo;
+            //ViewBag.TipoPerfil = listaTipoPerfil;
+
+            //return View("Form", funcionario);
         }
 
         public ActionResult Form()
@@ -52,7 +77,10 @@ namespace Projeto02.Controllers
 
             ViewBag.ListaEnum = TipoPerfil.Administrador.ToSelectList();
 
-            return View();
+            ViewBag.Equipe = listaEquipe;
+            ViewBag.Cargo = listaCargo;
+            //ViewBag.TipoPerfil = listaTipoPerfil;
+            return View(new Funcionario());
         }
 
         public ActionResult Remover(int id)

@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Views/Shared/_GestorLayout.cshtml";
+}
+
+<form action="/SolicitacaoLicenca/Atualiza/@ViewBag.SolicitacaoLicenca.Id" method="post">
+
+    <label for="Status">Status: </label>
+    <select id="Status" name="Status" class="form-control">
+        @foreach (var status in ViewBag.ListaEnum)
+        {
+            <option value="@status.Value"
+                    selected="@Convert.ToInt32(status.Value).Equals(Convert.ToInt32(ViewBag.SolicitacaoLicenca.Status))">
+                @status.Text
+            </option>
+        }
+    </select>
+
+    <label for="justificacao">Justificacao:</label>
+    <input type="text" value="@ViewBag.SolicitacaoLicenca.Justificacao" name="Justificacao" class="form-control" />
+    <br />
+
+    <input class="btn btn-primary" type="submit" value="Alterar" />
+
+</form>

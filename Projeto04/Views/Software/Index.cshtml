@@ -1,8 +1,16 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdmLayout.cshtml";
 }
-
+<td>
+    <a class="btn btn-primary pull-right" href="Form/">Adicionar</a>
+</td>
 <h2>Lista de Software do sistema.</h2>
+
+<label class="text-uppercase">Pesquisar da licença</label>
+<input class="form-control" type="text" name="pesquisa" id="pesquisa" placeholder="Digite o nome licença">
+<label style="opacity:0;">conselho</label>
+<br />
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -14,9 +22,9 @@
     <tbody>
         @foreach (var software in ViewBag.Software)
         {
-            <tr>
+            <tr class="busca">
                 <td>@software.Id</td>
-                <td>@software.NomeSoftware</td>
+                <td class="info-nome">@software.NomeSoftware</td>
                 <td>@software.Versao</td>
                 <td>
                     <a class="btn btn-primary" href="Alterar/@software.Id">Atualizar</a>
@@ -28,6 +36,5 @@
         }
     </tbody>
 </table>
-<td>
-    <a class="btn btn-primary" href="Form/">Adicionar</a>
-</td>
+
+<script type="text/javascript" src="~/Content/js/pesquisa.js"></script>

@@ -9,12 +9,12 @@ namespace Projeto02.Models
 {
     public class Usuario : EntityBase
     {
-        [Required] //Login do funcionario
+        [Required(ErrorMessage = "O login é obrigatória")] //Login do funcionario
         public string Login { get; set; }
 
         [StringLength(20)]
         [DataType(DataType.Password)]
-        [Required]
+        [Required(ErrorMessage = "O senha é obrigatória")]
         public string Senha { get; set; }
         [Required]
         public virtual Funcionario Funcionario { get; set; }

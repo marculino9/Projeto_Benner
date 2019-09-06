@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Projeto02.Models.SolicitacaoLicenca
+
+<h2>Justificação.</h2>
+<br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nome da Licenca</th>
+            <th>Usuario</th>
+            <th>Justificação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var solicitacaoLicenca in ViewBag.SolicitacaoLicenca)
+        {
+            <tr>
+                <td>@solicitacaoLicenca.Software.NomeSoftware</td>
+                <td>@solicitacaoLicenca.Usuario.Login</td>
+                <td>@solicitacaoLicenca.Justificacao</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -230,6 +230,10 @@
     <Compile Include="Migrations\20190820173533_V.1.designer.cs">
       <DependentUpon>20190820173533_V.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190903162617_justificacao.cs" />
+    <Compile Include="Migrations\20190903162617_justificacao.designer.cs">
+      <DependentUpon>20190903162617_justificacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ContextModelSnapshot.cs" />
     <Compile Include="Models\Cargo.cs" />
     <Compile Include="Models\EntityBase.cs" />
@@ -589,6 +593,8 @@
     <Content Include="Views\Home\Gestor.cshtml" />
     <Content Include="Views\Shared\_GestorLayout.cshtml" />
     <Content Include="Views\SolicitacaoLicenca\GestorLicenca.cshtml" />
+    <Content Include="Views\SolicitacaoLicenca\GesrtorAlterar.cshtml" />
+    <Content Include="Views\SolicitacaoLicenca\Justificacao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

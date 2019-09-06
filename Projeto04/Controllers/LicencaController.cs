@@ -13,6 +13,14 @@ namespace Projeto02.Controllers
     public class LicencaController : Controller
     {
         // GET: Licenca
+        private IList<Software> listaSoftwares
+        {
+            get
+            {
+                var dao = new SoftwareDAO();
+                return dao.Lista();
+            }
+        }
         public ActionResult Index()
         {
             var dao = new LicencaDAO();
@@ -20,7 +28,7 @@ namespace Projeto02.Controllers
             ViewBag.Licenca = licenca;
             return View();
         }
-        [HttpPost]
+        [HttpPost]        
         public ActionResult Adiciona(Licenca licenca)
         {
             if (ModelState.IsValid)
@@ -29,21 +37,15 @@ namespace Projeto02.Controllers
                 dao.Adiciona(licenca);
                 return View("Adiciona");
             }
-            //TempData.Keep("Licenca.SoftwareId");
-            //ViewBag.Software = TempData["software"];
-            //TempData.Keep("software");
-            return View("Form");
+            ViewBag.Software = listaSoftwares;
+
+            return View("Form",licenca);
         }
 
         public ActionResult Form()
         {
-            var dao = new SoftwareDAO();
-            IList<Software> software = dao.Lista();
-            ViewBag.Software = software;
-
-            TempData["software"] = software;
-            
-            return View();
+            ViewBag.Software = listaSoftwares;            
+            return View(new Licenca());
         }
         public ActionResult Remover(int id)
         {
@@ -75,6 +77,14 @@ namespace Projeto02.Controllers
             var dao = new LicencaDAO();
             dao.Atualiza(licenca);
             return View();
+        }
+        public ActionResult DecrementaQtd(int id)
+        {
+            LicencaDAO dao = new LicencaDAO();
+            Licenca licenca = dao.BuscaPorId(id);
+            licenca.Quantidade--;
+            dao.Atualiza(licenca);
+            return Json(licenca);
         }
     }
 }

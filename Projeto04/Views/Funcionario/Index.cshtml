@@ -1,8 +1,17 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdmLayout.cshtml";
 }
+<td>
+    <a class="btn btn-primary pull-right" href="Form/">Adicionar</a>
+</td>
 
 <h2>Lista de Funcionario do sistema.</h2>
+
+<label class="text-uppercase">Pesquisar funcionario</label>
+<input class="form-control" type="text" name="pesquisa" id="pesquisa" placeholder="Digite o nome do funcionario">
+<label style="opacity:0;">conselho</label>
+<br />
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -19,9 +28,9 @@
     <tbody>
         @foreach (var funcionario in ViewBag.Funcionario)
         {
-            <tr>
+            <tr class="busca">
                 <td>@funcionario.Id</td>
-                <td>@funcionario.Nome</td>
+                <td class="info-nome">@funcionario.Nome</td>
                 <td>@funcionario.Equipe.NomeEquipe</td>
                 <td>@funcionario.Cargo.NomeCargo</td>
                 <td>@funcionario.Maquina</td>
@@ -38,6 +47,5 @@
         }
     </tbody>
 </table>
-<td>
-    <a class="btn btn-primary" href="Form/">Adicionar</a>
-</td>
+
+<script type="text/javascript" src="~/Content/js/pesquisa.js"></script>

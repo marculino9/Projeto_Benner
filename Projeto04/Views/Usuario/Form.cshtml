@@ -3,6 +3,7 @@
     Layout = null;
 }
 
+@model Projeto02.Models.Usuario
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,26 +17,40 @@
     <link href="~/Content/demo/demo.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
-    @*<link href="~/Content/Site.css" rel="stylesheet" />*@
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <style type="text/css">
+        #alinhar {
+            width: 40%;
+            position: absolute;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 400px;
+            padding: 100px 100px;
+        }
+    </style>
 
 </head>
-<body class="dark-edition">
-    <h3 class="form- active">Cadastrar Usuarios</h3>
-    <div>
-        <form action="/Usuario/Adiciona" method="post">
-            <label for="login">Login:</label>
-            <input type="text" name="Usuario.Login" id="login" class="form-control" />
+<body class="dark-edition modal-dialog-centered">
+    <div class="card text-center" id="alinhar">
+        @Html.ValidationSummary(true)
+        <h3 class="form- active">Cadastrar Usuarios</h3>
+        <div>
+            <form action="/Usuario/Adiciona" method="post">
+                <label for="login">Login:</label>
+                <input type="text" name="Usuario.Login" id="login" class="form-control" />
 
 
-            <label for="senha">Senha:</label>
-            <input type="password" name="Usuario.Senha" id="senha" class="form-control" />
+                <label for="senha">Senha:</label>
+                <input type="password" name="Usuario.Senha" id="senha" class="form-control" />
 
-            <label for="codigoVerificacao">Codigo Verificacao:</label>
-            <input type="number" name="Usuario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />
+                <label for="codigoVerificacao">Codigo Verificacao:</label>
+                <input type="number" maxlength="10" max="2147483647" name="Usuario.CodigoVerificacao" id="codigoVerificacao" class="form-control" />
+                @Html.ValidationMessageFor(model => model.CodigoVerificacao)
+                <br /><br />
+                <input class="btn btn-primary" type="submit" value="Cadastrar" />
 
-            <input class="btn btn-primary" type="submit" value="Cadastrar" />
-
-        </form>
+            </form>
+        </div>
     </div>
 </body>
 </html>

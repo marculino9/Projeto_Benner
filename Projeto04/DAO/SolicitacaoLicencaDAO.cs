@@ -30,7 +30,7 @@ namespace Projeto02.DAO
 
         public SolicitacaoLicenca BuscaPorId(int id)
         {
-            return contexto.SolicitacaoLicencas.Find(id);
+            return contexto.SolicitacaoLicencas.Include(u => u.Usuario).Where(s => s.Id == id).FirstOrDefault();
         }
 
         public int SelecionarNumeroMaiorProtocolo()
@@ -56,6 +56,13 @@ namespace Projeto02.DAO
         public SolicitacaoLicenca Busca(int protocolo)
         {
             return contexto.SolicitacaoLicencas.FirstOrDefault(u => u.Protocolo == protocolo);
+        }
+
+        public void AlterarSituacao(SolicitacaoLicenca solicitacaoLicenca)
+        {
+            contexto.Entry(solicitacaoLicenca).Property(j => j.Justificacao).IsModified = true;
+            contexto.Entry(solicitacaoLicenca).Property(e => e.Status).IsModified = true;
+            contexto.SaveChanges();
         }
     }
 }

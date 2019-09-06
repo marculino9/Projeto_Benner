@@ -8,17 +8,17 @@
     <form action="/Licenca/Adiciona" method="post">
         @Html.ValidationSummary(true)
         <label for="chave">Chave:</label>
-        @*<input type="text" name="Licenca.chave" id="chave" class="form-control" />*@
-        @Html.EditorFor(model => model.Chave)
+        <input type="text" name="chave" id="chave" class="form-control" value="@Model.Chave"/>
+        @*@Html.EditorFor(model => model.Chave)*@
         @Html.ValidationMessageFor(model => model.Chave)
         <br />
         <label for="quantidade">Quantidade:</label>
-        @*<input type="text" name="Licenca.quantidade" id="quantidade" class="form-control" />*@
-        @Html.EditorFor(model => model.Quantidade)
+        <input type="text" name="quantidade" id="quantidade" class="form-control" value="@Model.Quantidade" />
+        @*@Html.EditorFor(model => model.Quantidade)*@
         @Html.ValidationMessageFor(model => model.Quantidade)
         <br />
         <label for="SoftwareId">SoftwareId:</label>
-        <select id="SoftwareId" name="Licenca.SoftwareId" class="form-control">
+        <select id="SoftwareId" name="SoftwareId" class="form-control">
             @foreach (var software in ViewBag.Software)
             {
                 <option value="@software.Id" selected="@software.Id.Equals(ViewBag.SoftwareId)">
@@ -27,7 +27,7 @@
 
             }
         </select>
-        @Html.ValidationMessageFor(model => model.SoftwareId)
+        @*@Html.ValidationMessageFor(model => model.SoftwareId)*@
         @*<br />
         <label for="usuarioId">UsuarioId:</label>
         <input type="text" name="usuarioId" id="usuarioId" class="form-control" />*@

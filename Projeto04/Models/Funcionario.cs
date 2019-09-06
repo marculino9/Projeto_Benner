@@ -10,17 +10,17 @@ namespace Projeto02.Models
 {
     public class Funcionario : EntityBase
     {
-        [Required] //Nome do funcionario
+        [Required(ErrorMessage = "O nome é obrigatória")] //Nome do funcionario
         public string Nome { get; set; }
         [Required] //Equipe
         public virtual Equipe Equipe { get; set; }
-        [Required]
+        [Required(ErrorMessage = "A equipe é obrigatória")]
         public int EquipeId { get; set; }
         [Required] //Cargo
         public virtual Cargo Cargo { get; set; }
         [Required(ErrorMessage = "* Cargo é obrigatório")]
         public int CargoId { get; set; }
-        [Required] //Nome do computador do funcionario
+        [Required(ErrorMessage = "O nome da maquina é obrigatória")] //Nome do computador do funcionario
         public string Maquina { get; set; }
         [Required]
         public int CodigoVerificacao { get; set; } //AQUI

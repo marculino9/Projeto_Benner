@@ -43,7 +43,10 @@ namespace Projeto02.Controllers
             var idFunc = funDao.BuscarPorCodigoVerificacao(usuario.CodigoVerificacao);
 
             if (idFunc == 0)
-                throw new InvalidOperationException("Código de verificação inválido") ;
+            {
+                ModelState.AddModelError("codigoVerificacao", "Código de verificação informado inválido.");
+                return View("Form");
+            }
 
             usuario.FuncionarioId = idFunc;
 
@@ -59,9 +62,11 @@ namespace Projeto02.Controllers
 
         public ActionResult Visualiza()
         {
+            var usuario1 = new Usuario();
             var dao = new UsuarioDAO();
             IList<Usuario> usuario = dao.Lista();
             ViewBag.Usuario = usuario;
+            //usuario1.Senha.ToString(null);
             return View();
         }
 

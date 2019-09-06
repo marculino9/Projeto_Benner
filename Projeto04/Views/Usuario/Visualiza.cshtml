@@ -1,4 +1,12 @@
-﻿<h2>Lista de Usuarios do sistema.</h2>
+﻿@{
+    Layout = "~/Views/Shared/_AdmLayout.cshtml";
+}
+
+<td>
+    <a class="btn btn-primary pull-right" href="Form/">Adicionar</a>
+</td>
+
+<h2>Lista de Usuarios do sistema.</h2>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -11,15 +19,15 @@
     <tbody>
         @foreach (var usuario in ViewBag.Usuario)
         {
-        <tr>
-            <td>@usuario.Id</td>
-            <td>@usuario.Login</td>
-            <td>@usuario.Senha</td>
-            <td>@usuario.Funcionario.Nome</td>
-            <td>
-                <a class="btn btn-primary" href="Usuario/Remover/@usuario.Id">Remover</a>
-            </td>
-        </tr>
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Login</td>
+                <td>***********</td>
+                <td>@usuario.Funcionario.Nome</td>
+                <td>
+                    <a class="btn btn-primary" href="Usuario/Remover/@usuario.Id">Remover</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

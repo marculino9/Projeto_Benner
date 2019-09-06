@@ -19,6 +19,9 @@ namespace Projeto02.Models
         public DateTime DataTermino { get; set; }
         [Required] //Fazer Numero
         public int Protocolo { get; set; }
+
+        public string Justificacao { get; set; }
+
         [Required] //Usuario
         public virtual Usuario Usuario { get; set; }
         [Required] // Id do Usuario
